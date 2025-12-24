@@ -240,27 +240,3 @@ p {
     };
   
 }
-/* @media (max-width: 480px) {
-   
-    .button-container {
-        width: 70%;
-        height: 7vh;
-    }
-    #speak-button {
-        width: 45%;
-        height: 65%;
-        font-size: 80%;
-    }
-    .welcome {
-        width: 90%;
-        height: auto;
-        top: 3%;
-    }
-    h1 {
-        font-size: 24px;
-    }
-    p {
-        font-size: small;
-        margin-top: 20px;
-    }
-} */
