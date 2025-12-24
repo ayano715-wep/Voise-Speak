@@ -14,11 +14,13 @@ body{
 }
 
 #text-input {
+    position: absolute;
     width:18%;
-    height: 18vh;
+    height: 23vh;
     padding: 10px;
     padding-right: 32px;
     margin-bottom: 20px;
+    margin-top: 10px;
     border: 2px solid #2e187a;
     box-shadow: 0 0 10px #2282a2a4,  inset 0 0 10px #2282a26c;
     border-radius: 8px;
@@ -39,12 +41,14 @@ body{
 .button-container {
     display: flex;
     position: relative;
-    width: 15%;
+    bottom: -7%;
+    width:20%;
     height: 5.5vh;
-   overflow: hidden;
+    overflow: hidden;
     flex-direction: row;
     justify-content: center;
-    align-items: center baseline;
+    align-items: center ;
+    gap: 10px;
 }
 #speak-button {
     width:36%;
@@ -55,7 +59,7 @@ body{
     border-left: 1px solid #a8a8a8b8;
     border-top: 1px solid #a8a8a8b8;
     border-radius: 8px;
-    font-size: 100%;
+    font-size: 90%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 800;
     cursor: pointer;
@@ -72,11 +76,8 @@ body{
     box-shadow: 0 0 10px #382a4894, inset 0 0 10px #302b4247;
 }
 #stop-button {
-    width:11%;
+    width:3vi;
     height: 53%;
-    position: absolute;
-    right:35px;
-    top:13%;
     padding-bottom: 4px;
     background: linear-gradient(135deg, #ab0505, #b9b9b994);
     color: #ffffffe4;
@@ -84,7 +85,7 @@ body{
     border-left: 1px solid #a8a8a8b8;
     border-top: 1px solid #a8a8a8b8;
     border-radius: 8px;
-    font-size: 90%;
+    font-size: 80%;
     cursor: pointer;
     box-shadow: 0 0 10px #382a4868, inset 0 0 10px #261b5247;
     transition: background-color 0.3s ease;
@@ -101,9 +102,7 @@ body{
 #clear-button{
     width:1.2%;
     height: 2.1%;
-    position: absolute;
-    left:58.6%;
-    top:37.2%;
+    align-self: flex-end;
     background-color: #ffffff00;
     border:none;
     border-radius: 8px;
@@ -111,8 +110,11 @@ body{
     cursor: pointer;
     color:rgb(196, 20, 20);
     transition: background-color 0.3s ease;
-    overflow: hidden;
     z-index: 10;
+    position:absolute;
+    left:58.4%;
+    top:38%;
+    font-weight: bolder;
 }
 #clear-button:hover {
     background-color: #929191b5;
@@ -123,9 +125,9 @@ body{
     border-top: 1px solid #a8a8a814;
 }
 .welcome {
-    position: absolute;
-    top: 10%;
-    width:38%;
+    position: relative;
+    top:-30%;
+    width:50%;
     height: 20vh;
     text-align: center;
     font-weight: bold;
@@ -139,7 +141,6 @@ h1 {
     color: #ffffffb3;
     text-shadow: 0 0 10px #000000b3;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
     overflow: hidden;
 
     animation: reveal 3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
@@ -195,26 +196,34 @@ p {
     }
 }
 @media (max-width: 768px) {
-    .button-container {
+
+    #text-input {
+        height: 24vh;
         width: 50%;
+   
+    }
+    .button-container {
+        position: normal;
+        width: 13rem;
         height: 6vh;
+        right:2%;
+        gap: 10px;
+        
     }
     #speak-button {
-        width: 40%;
+        position: normal;
+        width: 5rem;
         height: 70%;
-        font-size: 90%;
+        font-size: 70%;
+       
     }
     #stop-button {
-        width: 15%;
-        height: 60%;
+         position: normal;
+        width: 2rem;
+        height: 50%;
         right: 25px;
-        top: 20%;
+        top: 10%;
         font-size: 80%;
-    }
-    .welcome {
-        width: 80%;
-        height: auto;
-        top: 5%;
     }
     h1 {
         font-size: 32px;
@@ -223,9 +232,15 @@ p {
         font-size: medium;
         margin-top: 30px;
     }
+    #clear-button{
+        left:74%;
+        top:37%;
+        
+
+    };
   
 }
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
    
     .button-container {
         width: 70%;
@@ -248,4 +263,4 @@ p {
         font-size: small;
         margin-top: 20px;
     }
-}
+} */
